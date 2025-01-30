@@ -45,11 +45,11 @@ exports.updateUser = async (req, res) => {
   res.json(result);
 };
 
-// Delete a post
+
 exports.deleteUser = async (req, res) => {
   const { id } = req.params;
-  const post = await prisma.users.delete({
+  const remove = await prisma.users.delete({
     where: { id: id },
   });
-  res.json(post);
+  res.json(remove);
 };
